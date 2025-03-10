@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    env_file:
+      - ./deploy/.env.production
+    volumes:
+      - ./deploy:/deploy
+    entrypoint: ["/deploy/deploy.sh"]
+ 
